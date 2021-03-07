@@ -1,0 +1,6 @@
+version: "3.8"
+services:
+  app: # => サービス名は任意
+    build: ./infra/php # docker buildを実行する際の現在の作業ディレクトリ
+    volumes:
+      - ./backend:/work #ホスト側の ./backend ディレクトリをappサービスのコンテナ内 /work へマウント
